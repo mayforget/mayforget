@@ -245,8 +245,111 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/20/hexo-solve/" itemprop="url">
+                  Hexo搭建常见问题及解决方案总结
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-20T17:04:34+08:00" content="2016-07-20">
+              2016-07-20
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/20/hexo-solve/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/20/hexo-solve/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>上一篇文章介绍了Hexo+Coding搭建Hexo博客的主要步骤，搭建完成后出现了自己想看到的界面，但是官方的提供主题并不能满足我们各种各样的需求，这个给出一个主题<a href="https://github.com/hexojs/hexo/wiki/Themes">归纳链接</a>，里面总结了很多主题可供选择，具体使用可参考对应主题的官方文档。本篇文章主要介绍的是Hexo搭建过程中常见的问题及经过多次查询尝试后测试有效的解决方案。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/20/hexo-solve/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/18/hexo-coding/" itemprop="url">
-                  Hexo系列01——Mac上使用hexo+coding上搭建个人博客
+                  Mac上使用hexo+coding上搭建个人博客
                 </a>
               
             
@@ -295,43 +398,15 @@
 
       
         
-          
-            <blockquote>
+          <blockquote>
 <p>『Hexo是一个快速、简洁且高效的博客框架。Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件。只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站。Hexo 拥有强大的插件系统，安装插件可以让 Hexo 支持 Jade, CoffeeScript。』——简介来自官网</p>
 </blockquote>
-<p>之前折腾了几年WordPress和Typecho，最近接触了Jekyll、Hexo之后觉得单纯的写点什么还是这个好，最后选择了Hexo，搭建Hexo的平台有很多，比如Github、Coding等，但是出于国内访问速度考虑我选择了Coding，所以也就有了今天的Hexo+Coding博客搭建笔记。我这hexo版本是3.2.2，版本不同配置可能有些不同。</p>
-<h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><h3 id="1、Node-js的安装"><a href="#1、Node-js的安装" class="headerlink" title="1、Node.js的安装"></a>1、Node.js的安装</h3><p>Mac直接<a href="https://nodejs.org/download/release/latest/" target="_blank" rel="external">官网</a>下载安装，点击官网打开链接找到pkg文件下载进行安装</p>
-<h3 id="2、Git的安装"><a href="#2、Git的安装" class="headerlink" title="2、Git的安装"></a>2、Git的安装</h3><p>本地内容提交需要Git。如果你安装了Xcode那就自带Git，你可以使用以下命令来查看本机是否安装</p>
-<pre><code>git --version
-</code></pre><h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><h3 id="3、本地安装Hexo"><a href="#3、本地安装Hexo" class="headerlink" title="3、本地安装Hexo"></a>3、本地安装Hexo</h3><p>执行如下npm命令安装hexo</p>
-<pre><code>sudo npm install -g hexo
-</code></pre><h3 id="4、初始化"><a href="#4、初始化" class="headerlink" title="4、初始化"></a>4、初始化</h3><p>安装完成后，新建一个博客目录，切换到该目录下执行命令</p>
-<pre><code>cd 博客文件夹路径
-hexo init
-</code></pre><h3 id="5、安装Server组件"><a href="#5、安装Server组件" class="headerlink" title="5、安装Server组件"></a>5、安装Server组件</h3><p>继续在该目录下执行命令</p>
-<pre><code>sudo npm install hexo-server --save
-</code></pre><h1 id="启动本地服务"><a href="#启动本地服务" class="headerlink" title="启动本地服务"></a>启动本地服务</h1><h3 id="6、生成静态页面"><a href="#6、生成静态页面" class="headerlink" title="6、生成静态页面"></a>6、生成静态页面</h3><p>在博客目录下执行以下命令生成静态页面</p>
-<pre><code>hexo generate （或者hexo g）
-</code></pre><h3 id="7、启动本地服务"><a href="#7、启动本地服务" class="headerlink" title="7、启动本地服务"></a>7、启动本地服务</h3><p>预览调试，博客目录下执行如下命令启动本地服务器，成功后可看到这个链接 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 复制到浏览器中进行预览。</p>
-<pre><code>hexo server （或者hexo s）
-</code></pre><p>成功后界面如下图：<br><img src="/uplodes/1.png" alt="hexo"></p>
-<h1 id="配置Coding"><a href="#配置Coding" class="headerlink" title="配置Coding"></a>配置Coding</h1><h3 id="8、Coding上新建项目"><a href="#8、Coding上新建项目" class="headerlink" title="8、Coding上新建项目"></a>8、Coding上新建项目</h3><p>在Coding上新建一个项目，然后配置SSH公钥，具体参考<a href="https://coding.net/help/doc/git/ssh-key.html" target="_blank" rel="external">官方文档</a></p>
-<h3 id="9、修改本地配置文件"><a href="#9、修改本地配置文件" class="headerlink" title="9、修改本地配置文件"></a>9、修改本地配置文件</h3><p>修改本地博客目录下的 config.yml 文件，具体可参考<a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">官方文档</a>，主要修改参数如下</p>
-<pre><code>deploy:
-type: git       #部署方式，这里是git
-repo:           #Coding地址，例如：git@git.coding.net:mayforget/blog.git   
-branch:         #分支名，例如：master
-</code></pre><h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><h3 id="10、安装deploy组件"><a href="#10、安装deploy组件" class="headerlink" title="10、安装deploy组件"></a>10、安装deploy组件</h3><p>在博客目录下执行一下命令</p>
-<pre><code>sudo npm install hexo-deployer-git --save
-</code></pre><h3 id="11、部署到Coding"><a href="#11、部署到Coding" class="headerlink" title="11、部署到Coding"></a>11、部署到Coding</h3><p>执行以下命令将生成的博客静态页面 push 到Coding 创建的仓库中</p>
-<pre><code>hexo clean
-hexo generate
-hexo deploy
-</code></pre><p>开启Coding Pages 服务后即可访问博客，如果有自己的域名也可以绑定自己的域名，方便访问。具体可以参考<a href="https://coding.net/help/doc/pages/index.html" target="_blank" rel="external">官方文档</a>。</p>
-<hr>
-<p>以上就是本篇博客的所有内容，下一篇博客将介绍搭建过程中可能会出现的问题和相应的解决方案。<br>如文中无特殊说明，本站均使用以下协议保护：<a href="https://creativecommons.org/licenses/by-nc-nd/3.0/cn/" target="_blank" rel="external">知识共享署名-非商业性使用-禁止演绎</a>。转载请注明原地址<a href="http://www.mayforget.com" target="_blank" rel="external">www.mayforget.com</a></p>
-
-          
+<p>之前折腾了几年WordPress和Typecho，最近接触了Jekyll、Hexo之后觉得单纯的写点什么还是这个好，最后选择了Hexo，搭建Hexo的平台有很多，比如Github、Coding等，但是出于国内访问速度考虑我选择了Coding，所以也就有了今天的Hexo+Coding博客搭建笔记。我这hexo版本是3.2.2，版本不同配置可能有些不同。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/18/hexo-coding/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -399,7 +474,7 @@ hexo deploy
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

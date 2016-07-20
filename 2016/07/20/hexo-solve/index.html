@@ -1,0 +1,621 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="mayforget" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="上一篇文章介绍了Hexo+Coding搭建Hexo博客的主要步骤，搭建完成后出现了自己想看到的界面，但是官方的提供主题并不能满足我们各种各样的需求，这个给出一个主题归纳链接，里面总结了很多主题可供选择，具体使用可参考对应主题的官方文档。本篇文章主要介绍的是Hexo搭建过程中常见的问题及经过多次查询尝试后测试有效的解决方案。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo搭建常见问题及解决方案总结">
+<meta property="og:url" content="http://yoursite.com/2016/07/20/hexo-solve/index.html">
+<meta property="og:site_name" content="MayForget">
+<meta property="og:description" content="上一篇文章介绍了Hexo+Coding搭建Hexo博客的主要步骤，搭建完成后出现了自己想看到的界面，但是官方的提供主题并不能满足我们各种各样的需求，这个给出一个主题归纳链接，里面总结了很多主题可供选择，具体使用可参考对应主题的官方文档。本篇文章主要介绍的是Hexo搭建过程中常见的问题及经过多次查询尝试后测试有效的解决方案。">
+<meta property="og:updated_time" content="2016-07-20T09:19:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo搭建常见问题及解决方案总结">
+<meta name="twitter:description" content="上一篇文章介绍了Hexo+Coding搭建Hexo博客的主要步骤，搭建完成后出现了自己想看到的界面，但是官方的提供主题并不能满足我们各种各样的需求，这个给出一个主题归纳链接，里面总结了很多主题可供选择，具体使用可参考对应主题的官方文档。本篇文章主要介绍的是Hexo搭建过程中常见的问题及经过多次查询尝试后测试有效的解决方案。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/07/20/hexo-solve/"/>
+
+  <title> Hexo搭建常见问题及解决方案总结 | MayForget </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?727f387e71f0b9cba2cd1e12f84669f5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">MayForget</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Hexo搭建常见问题及解决方案总结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-20T17:04:34+08:00" content="2016-07-20">
+              2016-07-20
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/20/hexo-solve/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/20/hexo-solve/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>上一篇文章介绍了Hexo+Coding搭建Hexo博客的主要步骤，搭建完成后出现了自己想看到的界面，但是官方的提供主题并不能满足我们各种各样的需求，这个给出一个主题<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">归纳链接</a>，里面总结了很多主题可供选择，具体使用可参考对应主题的官方文档。本篇文章主要介绍的是Hexo搭建过程中常见的问题及经过多次查询尝试后测试有效的解决方案。<br><a id="more"></a></p>
+<h3 id="1、输入sudo-npm-install-g-hexo命令时出现以下警告信息"><a href="#1、输入sudo-npm-install-g-hexo命令时出现以下警告信息" class="headerlink" title="1、输入sudo npm install -g hexo命令时出现以下警告信息"></a>1、输入<code>sudo npm install -g hexo</code>命令时出现以下警告信息</h3><pre><code>fsevents@1.0.12 install /usr/local/lib/node_modules/hexo/node_modules/chokidar/node_modules/fsevents
+node-gyp install --fallback-to-buid
+
+gyp WARN EACCES user &quot;root&quot; does not have permission to access the dev dir &gt;&quot;/Users/xiangwenwen/.node-gyp/6.2.2&quot;
+gyp WARN EACCES attempting to reinstall using temporary dev dir &gt;&quot;/usr/local/lib/node_modules/hexo/node_modules/chokidar/node_modules/fsevents/.node-gyp&quot;
+</code></pre><h4 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h4><p>尝试<code>sudo npm install -g -unsafe-perm hexo</code>无效，然后尝试<code>sudo chmod 777 /var/root</code>依然无效，最后打开VPN再次输入<code>sudo npm install -g hexo</code>竟然解决了。</p>
+<h3 id="2、输入npm-install-hexo-g安装命令出现以下错误提示"><a href="#2、输入npm-install-hexo-g安装命令出现以下错误提示" class="headerlink" title="2、输入npm install hexo -g安装命令出现以下错误提示"></a>2、输入<code>npm install hexo -g</code>安装命令出现以下错误提示</h3><pre><code>{ [Error: Cannot find module &apos;./build/Release/DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }  
+{ [Error: Cannot find module &apos;./build/default/DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }  
+{ [Error: Cannot find module &apos;./build/Debug/DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }  
+</code></pre><h4 id="解决方案：-1"><a href="#解决方案：-1" class="headerlink" title="解决方案："></a>解决方案：</h4><p><code>npm install hexo --no-optional</code></p>
+<h3 id="3、hexo-d上传出现spawn-git-ENOENT错误提示，详情如下"><a href="#3、hexo-d上传出现spawn-git-ENOENT错误提示，详情如下" class="headerlink" title="3、hexo d上传出现spawn git ENOENT错误提示，详情如下"></a>3、<code>hexo d</code>上传出现<code>spawn git ENOENT</code>错误提示，详情如下</h3><pre><code>Error: spawn git ENOENT
+   at exports._errnoException (util.js:746:11)
+   at Process.ChildProcess._handle.onexi
+   (child_process.js:1053:32)
+   at child_process.js:1144:20)
+   at process._tickCallback (node.js:355:11)
+</code></pre><h4 id="解决方案：-2"><a href="#解决方案：-2" class="headerlink" title="解决方案："></a>解决方案：</h4><p><code>\Git\bin;\Git\libexec\git-core</code>添加Git环境变量即可</p>
+<h3 id="4、MAC-下找不到id-rsa-pub和id-rsa文件"><a href="#4、MAC-下找不到id-rsa-pub和id-rsa文件" class="headerlink" title="4、MAC 下找不到id_rsa.pub和id_rsa文件"></a>4、MAC 下找不到<code>id_rsa.pub</code>和<code>id_rsa</code>文件</h3><h4 id="解决方案：-3"><a href="#解决方案：-3" class="headerlink" title="解决方案："></a>解决方案：</h4><p><strong>Finder</strong>里按下<code>cmd+shift+G</code>后输入<code>~/.ssh</code>查找即可看到</p>
+<h3 id="5、想重新安装Hexo或者安装旧版本，怎么卸载Hexo"><a href="#5、想重新安装Hexo或者安装旧版本，怎么卸载Hexo" class="headerlink" title="5、想重新安装Hexo或者安装旧版本，怎么卸载Hexo"></a>5、想重新安装Hexo或者安装旧版本，怎么卸载Hexo</h3><h3 id="解决方案：-4"><a href="#解决方案：-4" class="headerlink" title="解决方案："></a>解决方案：</h3><p><code>npm uninstall hexo-cli -g</code></p>
+<hr>
+<p>如文中无特殊说明，本站均使用以下协议保护：<a href="https://creativecommons.org/licenses/by-nc-nd/3.0/cn/" target="_blank" rel="external">知识共享署名-非商业性使用-禁止演绎</a>。转载请注明原地址<a href="http://www.mayforget.com" target="_blank" rel="external">www.mayforget.com</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/18/hexo-coding/" rel="next" title="Mac上使用hexo+coding上搭建个人博客">
+                <i class="fa fa-chevron-left"></i> Mac上使用hexo+coding上搭建个人博客
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/20/hexo-solve/"
+           data-title="Hexo搭建常见问题及解决方案总结" data-url="http://yoursite.com/2016/07/20/hexo-solve/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="MayForget" />
+          <p class="site-author-name" itemprop="name">MayForget</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/cn7570" target="_blank" title="新浪微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  新浪微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、输入sudo-npm-install-g-hexo命令时出现以下警告信息"><span class="nav-text">1、输入sudo npm install -g hexo命令时出现以下警告信息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案："><span class="nav-text">解决方案：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、输入npm-install-hexo-g安装命令出现以下错误提示"><span class="nav-text">2、输入npm install hexo -g安装命令出现以下错误提示</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案：-1"><span class="nav-text">解决方案：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、hexo-d上传出现spawn-git-ENOENT错误提示，详情如下"><span class="nav-text">3、hexo d上传出现spawn git ENOENT错误提示，详情如下</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案：-2"><span class="nav-text">解决方案：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、MAC-下找不到id-rsa-pub和id-rsa文件"><span class="nav-text">4、MAC 下找不到id_rsa.pub和id_rsa文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案：-3"><span class="nav-text">解决方案：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、想重新安装Hexo或者安装旧版本，怎么卸载Hexo"><span class="nav-text">5、想重新安装Hexo或者安装旧版本，怎么卸载Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案：-4"><span class="nav-text">解决方案：</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MayForget</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"mayforget"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
